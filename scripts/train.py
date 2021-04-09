@@ -18,9 +18,6 @@ add_agent_args()
 add_training_args()
 
 # Global vars
-THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-
-
 # Objective function
 def run_experiment():
     # Define agent-specific arguments
@@ -47,6 +44,13 @@ def run_experiment():
         )
     else:
         pass
+    
+    # Set random seed
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
+
+    # Directory to place data
+    THIS_DIR = os.path.dirname(args.variant) # os.path.dirname(os.path.abspath(__file__))
 
     # Construct variant to train
     if args.variant is None:
@@ -108,9 +112,9 @@ if __name__ == '__main__':
     # First, parse args
     args = parser.parse_args()
 
-    # Set random seed
-    np.random.seed(args.seed)
-    torch.manual_seed(args.seed)
+    # # Set random seed
+    # np.random.seed(args.seed)
+    # torch.manual_seed(args.seed)
 
     # Notify user we're starting run
     print('\n\n')

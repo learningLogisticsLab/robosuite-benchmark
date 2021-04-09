@@ -5,6 +5,7 @@ channels:
 - pytorch
 - anaconda  # for mkl
 dependencies:
+- python=3.7.4
 - pip=19.2.3
 - cython=0.29.13
 - ipython=7.8.0  # technically unnecessary
@@ -15,7 +16,6 @@ dependencies:
 - mkl=2019.4
 - numpy=1.17.2
 - path.py=12.4.0
-- python=3.7.4
 - python-dateutil=2.8.1
 - pytorch=1.4.0
 - scipy=1.4.1
