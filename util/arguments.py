@@ -198,7 +198,7 @@ def add_training_args():
     parser.add_argument(
         '--log_dir',
         type=str,
-        default='../log/runs/',
+        default='/media/juan/hdd/data/suite/runs',
         help='directory to save runs')
 
 
